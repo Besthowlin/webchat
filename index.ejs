@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>real time chat app</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <h1>Chat Room Encryption <img style="width: 50px; height: 50px" src="https://www.svgrepo.com/show/7612/chat.svg"></h1>
+        </div>
+        <div class="card text-white bg-danger mb-3">
+            <div class="card-header">Anonymous</div>
+            <div class="card-body">
+                <div class="input-group">
+                    <input type="text" class="form-control" id="username" placeholder="Change your username">
+                    <div class="input-group-append" style="padding-left: 15px;">
+                        <button class="btn btn-primary" type="button" id="usernameBtn">Change</button>
+                    </div>
+                </div>
+            </div>
+                <div class="message-box">
+                    <ul class="list-group list-group-flush" id="message-list"></ul>
+                    <div class="info"></div>
+                </div>
+                <div class="card-footer">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="message" placeholder="send new message">
+                        <div class="input-group-append" style="padding-left: 15px;">
+                            <button class="btn btn-success" type="button" id="messageBtn">Send</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="encrypted-message-box">
+                    <h4 style="padding-left: 15px;">Encrypted Messages</h4>
+                    <ul class="list-group list-group-flush" id="encrypted-message-list"></ul>
+                </div>
+              
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.js"></script>
+    <script src="/js/chatroom.js"></script>
+</body>
+</html>
